@@ -1,8 +1,4 @@
 #!/bin/bash
 
-# تثبيت cloudflared
-wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-sudo dpkg -i cloudflared-linux-amd64.deb
-
-# تشغيل Tunnel يمرر كل الطلبات إلى Backend
+# تشغيل Tunnel لتوجيه كل الطلبات إلى Backend
 cloudflared tunnel run my-tunnel --url http://mepboq.runasp.net
